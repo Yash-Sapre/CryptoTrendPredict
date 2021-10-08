@@ -11,3 +11,6 @@ def home():
 @app.route('/currency_details/<int:id>')
 def currency_details(id):
     return render_template('details.html')
+
+
+app.run(debug=True)  
