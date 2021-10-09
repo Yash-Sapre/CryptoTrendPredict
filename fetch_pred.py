@@ -53,7 +53,7 @@ def get_pred_btc():
     ax.set_ylabel('Bitcoin Price in USD')
     ax.set_xlabel('Dates')
     plt.title(f"Bitcoin Price Prediction for Data of Days :{len(data)-5}")
-    return ax
+    return (ax,out_data,datelist[10:len(data)+5])
 
 def get_pred_eth():
     """
@@ -95,7 +95,7 @@ def get_pred_eth():
     ax.set_ylabel('Etherum Price in USD')
     ax.set_xlabel('Dates')
     plt.title(f"Etherum Price Prediction for Data of Days :{len(data)-5}")
-    return ax
+    return (ax,out_data,datelist[10:len(data)+5])
 
 def get_pred_doge():
     """
@@ -137,7 +137,7 @@ def get_pred_doge():
     ax.set_ylabel('DOGE Price in USD')
     ax.set_xlabel('Dates')
     plt.title(f"DOGE Price Prediction for Data of Days :{len(data)-5}")
-    return ax
+    return (ax,out_data,datelist[10:len(data)+5])
 
 def get_pred_shib():
     """
@@ -179,5 +179,5 @@ def get_pred_shib():
     ax.set_ylabel('SHIB Price in USD')
     ax.set_xlabel('Dates')
     plt.title(f"SHIB Price Prediction for Data of Days :{len(data)-5}")
-    return ax
+    return (ax,out_data,datelist[10:len(data)+5])
 

@@ -1,29 +1,45 @@
-<p >
-<b >
-<h1 style="text-align: center;">
-    Graph</h1>
-</b>
-</p>
+
 {% extends 'layout.html' %}
 
 
 {%block body%}
 
 <!-- <img src='static/btc-pred.png' alt=''> -->
+<div class = "container">
+    <div class="row">
+        <div class = "offset-1 col-10">
+        {% if img==1 %}
+        <img src='{{ url_for('static', filename='btc-pred.png') }}' alt='btc' height="110%" width="100%">
 
-{% if img==1 %}
-<img src='{{ url_for('static', filename='btc-pred.png') }}' alt='btc' height="110%" width="100%">
+        {% elif img==2 %}
+        <img src='{{ url_for('static', filename='doge-pred.png') }}' alt='eth' height="110%" width="100%">
+        {% elif img==3 %}
+        <img src='{{ url_for('static', filename='eth-pred.png') }}' alt='eth' height="110%" width="100%">
+        {% elif img==4 %}
+        <img src='{{ url_for('static', filename='shib-pred.png') }}' alt='eth' height="110%" width="100%">
 
-{% elif img==2 %}
-<img src='{{ url_for('static', filename='doge-pred.png') }}' alt='eth' height="110%" width="100%">
-{% elif img==3 %}
-<img src='{{ url_for('static', filename='eth-pred.png') }}' alt='eth' height="110%" width="100%">
-{% elif img==4 %}
-<img src='{{ url_for('static', filename='shib-pred.png') }}' alt='eth' height="110%" width="100%">
+        {% else %}
+        <h2>  Something Went Wrong</h2>
+        {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class = "offset-1 col-10" style="overflow-y:auto ; height: 15rem ;margin-top:2em;">
+            <table class="table">
+                <tr>
+                <th>Date </th>
+                <th>Price </th>
+                </tr>
 
-{% else %}
-<h2>  Something Went Wrong</h2>
-{% endif %}
-
+                {% for item in data %}
+                <tr>
+                <td>{{item.0}}</td>
+                <td>{{item.1}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
 
 {%endblock%}
