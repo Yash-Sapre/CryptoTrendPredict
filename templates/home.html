@@ -1,6 +1,45 @@
-List of currencies:
-<ul>
-<li><a href = '/currency_details/1'>Bitcoin</a></li>
-<li><a href = '/currency_details/2' >Ethereum</a></li>
-<li><a href = '/currency_details/3' >Dogecoin</a></li>
-</ul>
+{% extends 'layout.html' %}
+{%block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/BTC.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Bitcoin</h5>
+                    <a href='/currency_details/1' class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/Dogecoin.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Dogecoin</h5>
+                    <a href='/currency_details/2' class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/Ethereum.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Ethereum</h5>
+                    <a href='/currency_details/3' class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <img src="static/Shiba.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Shiba</h5>
+                    <a href='/currency_details/4' class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
