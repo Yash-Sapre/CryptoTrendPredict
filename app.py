@@ -71,5 +71,5 @@ def currency_details(id):
        return "Wrong Input Received , please Go back and select Appropriate Crypto Values"
 
 
-# app.run(debug=True)   # Running app 
-app.run()
+# app.run(debug=True)   # Running Aop for testing 
+app.run()     # Running Aop for Production
