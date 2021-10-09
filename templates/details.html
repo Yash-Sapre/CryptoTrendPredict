@@ -13,9 +13,16 @@
 
 {% if img==1 %}
 <img src='{{ url_for('static', filename='btc-pred.png') }}' alt='btc' height="110%" width="100%">
-{% else %}
 
+{% elif img==2 %}
+<img src='{{ url_for('static', filename='doge-pred.png') }}' alt='eth' height="110%" width="100%">
+{% elif img==3 %}
 <img src='{{ url_for('static', filename='eth-pred.png') }}' alt='eth' height="110%" width="100%">
+{% elif img==4 %}
+<img src='{{ url_for('static', filename='shib-pred.png') }}' alt='eth' height="110%" width="100%">
+
+{% else %}
+<h2>  Something Went Wrong</h2>
 {% endif %}
 
 
