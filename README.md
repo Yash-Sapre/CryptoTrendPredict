@@ -1,7 +1,7 @@
 # HackSprint_02_Alpha
 1) Yash Sapre [Team Leader]<br />
 2) Rahul Agrwal<br />
-3) Venkatesh Ratnaparhe<br />
+3) Venkatesh Ratnaparkhe<br />
 
 
 App.py conatins Flask Application to access frontend part <br />
