@@ -13,8 +13,11 @@
 
 {% if img==1 %}
 <img src='{{ url_for('static', filename='btc-pred.png') }}' alt='btc' height="110%" width="100%">
-{% else %}
 
+{% elif img==2 %}
+<img src='{{ url_for('static', filename='doge-pred.png') }}' alt='eth' height="110%" width="100%">
+
+{% else %}
 <img src='{{ url_for('static', filename='eth-pred.png') }}' alt='eth' height="110%" width="100%">
 {% endif %}
 
