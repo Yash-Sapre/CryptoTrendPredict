@@ -1,5 +1,5 @@
 '''
-This is python to serve data with prediction graph and datetime data to the Flask App
+This is python file to serve data with prediction graph and datetime data to the Flask App
 
 '''
 
@@ -32,8 +32,9 @@ def get_pred_btc():
     args:
             NO Argument Required
     returns :
-            {matplolib.plot}: contains graph of actual data and model predicted values  
-    
+            ax: contains graph of actual data and model predicted values  
+            out_data : actual and precticted values 
+            datelist : dates according to out_data values
     """
     model = btc_model
 #      Loading minmaxscaler that is used while training model
@@ -89,9 +90,11 @@ def get_pred_eth():
     """
     for getting prediction on future 10 days from today on Etherum
     args:
-            NO Argument Required
+            No Argument Required
     returns :
-            {matplolib.plot}: contains graph of actual data and model predicted values  
+            ax: contains graph of actual data and model predicted values  
+            out_data : actual and precticted values 
+            datelist : dates according to out_data values
     
     """
     model = eth_model
@@ -133,7 +136,9 @@ def get_pred_doge():
     args:
             NO Argument Required
     returns :
-            {matplolib.plot}: contains graph of actual data and model predicted values  
+             ax: contains graph of actual data and model predicted values  
+            out_data : actual and precticted values 
+            datelist : dates according to out_data values
     
     """
     model = doge_model
@@ -175,7 +180,9 @@ def get_pred_shib():
     args:
             NO Argument Required
     returns :
-            {matplolib.plot}: contains graph of actual data and model predicted values  
+             ax: contains graph of actual data and model predicted values  
+            out_data : actual and precticted values 
+            datelist : dates according to out_data values
     
     """
     model = shib_model
