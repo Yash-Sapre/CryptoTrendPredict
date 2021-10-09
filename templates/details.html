@@ -1,9 +1,22 @@
-Table:
-Graph:
+<p >
+<b >
+<h1 style="text-align: center;">
+    Graph</h1>
+</b>
+</p>
 {% extends 'layout.html' %}
+
+
 {%block body%}
 
 <!-- <img src='static/btc-pred.png' alt=''> -->
-<img src='{{ url_for('static', filename='btc-pred.png') }}' alt=''>
+
+{% if img==1 %}
+<img src='{{ url_for('static', filename='btc-pred.png') }}' alt='btc' height="110%" width="100%">
+{% else %}
+
+<img src='{{ url_for('static', filename='eth-pred.png') }}' alt='eth' height="110%" width="100%">
+{% endif %}
+
 
 {%endblock%}
