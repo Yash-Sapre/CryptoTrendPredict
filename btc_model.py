@@ -34,8 +34,8 @@ def get_pred():
         i=i+1
     plt.figure(figsize=(20,10))
     datelist = pd.date_range(init_date , periods=len(data)+i-1)
-    ax=sns.lineplot(datelist[:len(data)],data, label='input', marker='o')
-    ax=sns.lineplot(datelist[10:len(data)+5],out_data ,label='Prediction', marker='o')
+    ax=sns.lineplot(datelist[:len(data)],data, label='Actual_Values', marker='o')
+    ax=sns.lineplot(datelist[10:len(data)+5],out_data ,label='Predicted_Values', marker='o')
     plt.title(f" Data of Days :{len(data)}")
 
     return ax

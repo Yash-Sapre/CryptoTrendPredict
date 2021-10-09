@@ -3,6 +3,7 @@ from btc_model import get_pred
 import io
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
+from PIL import Image
 
 app = Flask(__name__)
 
@@ -14,11 +15,12 @@ def home():
 
 @app.route('/currency_details/<int:id>')
 def currency_details(id):
-    fig = get_pred()
-    output = io.BytesIO()
-    FigureCanvas(fig).print_png(output)
-    return Response(output.getvalue(), mimetype='image/png')
-    # return render_template('details.html')
+    if id==1:
+        fig = get_pred()
+        fig.get_figure().savefig('static/btc-pred.png')
+        return render_template('details.html' , img ="btc_pred.png")
+    else:
+       return "Model not build yet"
 
 
 app.run(debug=True)  
